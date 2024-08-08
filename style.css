@@ -36,8 +36,8 @@ nav{
 }
 
 .nav-logo img {
-    width: 100px;        /* Defina a largura da logo */
-    height: 100px;       /* Defina a altura da logo */
+    width: 200px;        /* Defina a largura da logo */
+    height: 200px;       /* Defina a altura da logo */
     border-radius: 50%;  /* Torna a imagem circular */
     object-fit: cover;   /* Ajusta a imagem para cobrir o contêiner */
 }
@@ -90,12 +90,6 @@ nav{
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
-}
-
-.blur{
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
-    z-index: -100;
 }
 
 header {
