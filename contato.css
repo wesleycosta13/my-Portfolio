@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #18181B;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    color: #fff; /* Ajuste para garantir contraste com o fundo escuro */
+    margin-bottom: 20px;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media h2 {
+    margin-bottom: 19px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os ícones */
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Largura do círculo */
+    height: 50px; /* Altura do círculo */
+    border-radius: 50%; /* Faz o elemento ser um círculo */
+    background-color: #fff; /* Cor de fundo do círculo */
+    color: #18181B; /* Cor dos ícones */
+    font-size: 54px; /* Tamanho dos ícones */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor do fundo e ícone */
+}
+
+.icons a:hover {
+    background-color: #007bff; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor dos ícones ao passar o mouse */
+}

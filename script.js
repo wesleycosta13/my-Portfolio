@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Primeiro bloco de código para scroll suave
     const link1 = document.getElementById("link1");
     const link2 = document.getElementById("link2");
     const link3 = document.getElementById("link3");
@@ -16,20 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (link3) {
+        // Corrigido ID sem espaços
         link3.addEventListener('click', () => {
-            scrollToElement('#My Projects');
+            scrollToElement('#MyProjects');
         });
     }
-});
 
-function scrollToElement(selector) {
-    const element = document.querySelector(selector);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+    // Função de scroll suave
+    function scrollToElement(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
     }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Segundo bloco de código para scroll suave de todos os links no nav
     const links = document.querySelectorAll('nav a');
 
     links.forEach(link => {
@@ -39,10 +41,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = link.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
 
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
+
+    // Código para redirecionar ao clicar no botão "Contato"
+    const btnContato = document.getElementById('btnContato');
+    if (btnContato) {
+        btnContato.addEventListener('click', () => {
+            window.location.href = 'contato.html';
+        });
+    }
 });
 
+document.getElementById('startButton').addEventListener('click', function() {
+    alert('SITE AINDA EM DESENVOLVIMENTO!');
+});
