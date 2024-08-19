@@ -1,72 +1,121 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #181818;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.container {
+body{
+    font-family: 'Poppins', sans-serif;
     background-color: #18181B;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 400px;
+}
+
+img{
     width: 100%;
-    color: #fff; /* Ajuste para garantir contraste com o fundo escuro */
-    margin-bottom: 20px;
+    display: flex;
+
 }
 
-h1{
-    margin-bottom: 15px;
-}
-
-p {
-    margin: 10px 0;
-    font-size: 25px;
-}
-
-a {
-    color: #007bff;
+a{
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.social-media {
-    text-align: center;
-}
-
-.social-media h2 {
-    margin-bottom: 19px;
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Espaço entre os ícones */
-}
-
-.icons a {
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50px; /* Largura do círculo */
-    height: 50px; /* Altura do círculo */
-    border-radius: 50%; /* Faz o elemento ser um círculo */
-    background-color: #fff; /* Cor de fundo do círculo */
-    color: #18181B; /* Cor dos ícones */
-    font-size: 54px; /* Tamanho dos ícones */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor do fundo e ícone */
+    justify-content: space-between;
+    gap: 2rem;
+
 }
 
-.icons a:hover {
-    background-color: #007bff; /* Cor de fundo ao passar o mouse */
-    color: #fff; /* Cor dos ícones ao passar o mouse */
+.nav-logo img {
+    width: 200px;        /* Defina a largura da logo */
+    height: 200px;       /* Defina a altura da logo */
+    border-radius: 50%;  /* Torna a imagem circular */
+    object-fit: cover;   /* Ajusta a imagem para cobrir o contêiner */
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    list-style: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease ;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.Container{
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    color: #fff;
+}
+
+.Container i {
+    font-size: 23px;
+}
+
+.social-media a {
+    color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius:100%;
+    transition: all 0.3s ease;
+}
+
+.social-media a:hover{
+    color: #fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+}
+
+@media (width < 600px){
+    nav {
+        padding: 1rem;
+    }
+    .nav-logo img {
+        width: 120px;
+        height: 120px;
+    }
+    .nav-logo img {
+        width: 120px;
+        height: 120px;
+    }
+    .Container h1 {
+        font-size: 28px;
+    }
+
+    .Container h2 {
+        font-size: 22px;
+    }
+
 }
